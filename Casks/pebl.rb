@@ -1,9 +1,6 @@
 cask "pebl" do
-  version "0.4.1"
-  sha256 "6b72af667629b4b3ddcf96e138fce6db2d314ac04419be6ede3acf64c6936287"
-
-  # v0.4.1 is arm64-only. Intel returns in v0.5.0.
-  depends_on arch: :arm64
+  version "0.4.0"
+  sha256 "3a6270ed8c29ca8eb3d4a59d5fadb1f7e6c8b8d13903006e8103d53d1787558a"
 
   url "https://github.com/srinitya1995-oss/pebl-releases/releases/download/v#{version}/Pebl-#{version}.dmg"
   name "Pebl"
