@@ -1,6 +1,6 @@
 # homebrew-pebl
 
-Homebrew tap for **[Pebl](https://peblapp.com)** — a free, open-source Mac desktop wellness companion that reminds you to stretch and breathe, and stays quiet during your Zoom calls.
+Homebrew tap for **[Pebl](https://peblapp.com)**. Free, open-source Mac desktop wellness companion that reminds you to stretch and breathe, and stays quiet during your Zoom calls.
 
 ## Install
 
@@ -9,7 +9,12 @@ brew tap srinitya1995-oss/pebl
 brew install --cask pebl
 ```
 
-That's it. `brew` will download, verify, and install Pebl into `/Applications`. No "damaged app" warnings, no right-click workaround, no manual quarantine fixing — the cask handles it.
+That's it. `brew` will download, verify, and install Pebl into `/Applications`. No "damaged app" warnings, no right-click workaround, no manual quarantine fixing. The cask handles it.
+
+## Requirements
+
+- macOS 12 (Monterey) or later
+- Apple Silicon (M1, M2, M3, M4). Intel returns in v0.5.0.
 
 ## Update
 
@@ -17,7 +22,7 @@ That's it. `brew` will download, verify, and install Pebl into `/Applications`. 
 brew upgrade --cask pebl
 ```
 
-Or let Pebl's built-in auto-updater do it for you — it checks `pebl-releases` on a schedule and asks your permission before installing new versions.
+Or let Pebl's built-in auto-updater do it for you. It checks `pebl-releases` on a schedule and asks your permission before installing new versions.
 
 ## Uninstall
 
@@ -33,7 +38,7 @@ brew uninstall --cask --zap pebl
 
 ## What is Pebl?
 
-A warm orange orb lives in your Mac menu bar. It watches your work rhythm and gently reminds you to stretch, breathe, and take breaks at natural pause points — without interrupting your meetings.
+A warm orange orb lives in your Mac menu bar. It watches your work rhythm and gently reminds you to stretch, breathe, and take breaks at natural pause points, without interrupting your meetings.
 
 **What makes it different:**
 - **Stays quiet during calls.** Pebl detects Zoom, Teams, Meet, Slack, Discord, Webex, Loom, and any fullscreen app. No config. It just respects your meetings.
@@ -46,7 +51,7 @@ See **[peblapp.com](https://peblapp.com)** for the full story.
 
 ## Why a separate tap instead of homebrew-cask?
 
-Pebl is currently ad-hoc signed while we work toward a full Apple Developer ID certificate and notarization. Homebrew-cask's main repo requires signed-and-notarized casks, so we self-host this tap until Pebl is notarized.
+The current build is unsigned and unnotarized while we work toward a full Apple Developer ID certificate and notarization. The cask works around the resulting Gatekeeper block by removing the quarantine attribute on install. Homebrew-cask's main repo requires signed-and-notarized casks, so we self-host this tap until Pebl is notarized.
 
 Once notarization is set up, we'll submit to homebrew-cask and you'll be able to install via `brew install --cask pebl` without the tap step.
 
